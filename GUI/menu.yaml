@@ -1,0 +1,12 @@
+EMETTEUR: [toi, moi]
+QUALITE: [bonne, pas bonne]
+REF DOC: date
+TYPE D'INTERVENTION: [C, D]
+ETAPE: [0, 1, 2, 3]
+MOT: {line: WM000}
+POSITION: [Gauche, Droite]
+N° SUPPORT: line
+NOM DU LRU: photo
+DATE: date
+N° ITCA: {line: ITCA - N°}
+NOM DU SERVICE: [A, B]

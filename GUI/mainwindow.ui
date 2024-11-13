@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>384</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>200</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>ITCA</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.png</normaloff>icon.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_central">
+    <item row="3" column="2" colspan="2">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Selectionné le type d'ITCA:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Pour créer un nouveau, appuyer sur start sans rien sélectionner.</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidget"/>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="2" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_launch">
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_launch">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>180</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionAcquisitioninfo">
+   <property name="text">
+    <string>Acquisition information</string>
+   </property>
+   <property name="iconText">
+    <string>Acquisition information</string>
+   </property>
+  </action>
+  <action name="actionParametersinfo">
+   <property name="text">
+    <string>Parameters information</string>
+   </property>
+  </action>
+  <action name="actionStop_AWG">
+   <property name="text">
+    <string>Stop AWG</string>
+   </property>
+  </action>
+  <action name="actionStop_CC">
+   <property name="text">
+    <string>Stop CC</string>
+   </property>
+  </action>
+  <action name="actionExport_config">
+   <property name="text">
+    <string>Export config</string>
+   </property>
+  </action>
+  <action name="actionLoad_config">
+   <property name="text">
+    <string>Load config</string>
+   </property>
+  </action>
+  <action name="actionLaunch_SCT">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Launch</string>
+   </property>
+  </action>
+  <action name="actionReset_all">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Reset config</string>
+   </property>
+  </action>
+  <action name="actionLaunch_for_GCID_only">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Launch for GCID only</string>
+   </property>
+  </action>
+  <action name="actionNativeDialog">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Native dialog</string>
+   </property>
+  </action>
+  <action name="actionLaunch_script">
+   <property name="text">
+    <string>Launch script</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>pushButton_launch</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_launch</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>launch()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>620</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addProfil()</slot>
+  <slot>delProfil()</slot>
+  <slot>saveParam()</slot>
+  <slot>launch()</slot>
+  <slot>updateCombobox()</slot>
+  <slot>updateText()</slot>
+  <slot>activationdialog()</slot>
+ </slots>
+</ui>

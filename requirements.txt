@@ -1,0 +1,8 @@
+pip
+pyqt5~=5.15.6
+fnmatch
+pillow~=9.0.1
+oyaml~=1.0
+pdfrw~=0.4
+fdfgen~=0.16.1
+pdfjinja~=1.1.0
